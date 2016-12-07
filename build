@@ -1,0 +1,5 @@
+FILES=`ls c`
+for i in $FILES
+do
+	clang c/$i -S -emit-llvm -o ll/${i%.*}.ll
+done
